@@ -8,7 +8,11 @@ public class Orc extends Personagem{
     }
 
     @Override
-    public void receberDano() {
+    public void receberDano(int dano) {
 
     }
+
+
+
+
 }

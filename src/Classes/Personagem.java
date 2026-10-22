@@ -17,18 +17,22 @@ public abstract class Personagem {
     }
         //
 
-    public void atacar() {
-
+    public void atacar(Personagem alvo) {
+        alvo.receberDano(this.ataque);
     }
     public void receberDano(int dano){
-        HP = dano - defesa;
+        int danoEfetivo = dano - defesa;
+        if (danoEfetivo < 0){
+            danoEfetivo = 0;
+        }
+        this.HP = this.HP - danoEfetivo;
     }
 
-    public abstract void receberDano();
 
     public void defender(){
 
     }
+
     public boolean estarVivo(){
             if (HP > 0) {
                 return true;
