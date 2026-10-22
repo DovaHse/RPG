@@ -8,23 +8,5 @@ public class Guerreiro extends Personagem{
     }
 
 
-    @Override
-    public void atacar(Personagem alvo) {
-        super.atacar(alvo);
-    }
 
-    @Override
-    public void receberDano(int dano) {
-    }
-
-    @Override
-    public void defender() {
-        super.defender();
-    }
-
-    @Override
-    public boolean estarVivo() {
-        super.estarVivo();
-        return super.estarVivo();
-    }
 }

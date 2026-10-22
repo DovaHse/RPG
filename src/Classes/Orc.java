@@ -7,10 +7,7 @@ public class Orc extends Personagem{
         super(nome, hp, ataque, defesa);
     }
 
-    @Override
-    public void receberDano(int dano) {
 
-    }
 
 
 
