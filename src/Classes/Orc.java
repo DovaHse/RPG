@@ -9,7 +9,4 @@ public class Orc extends Personagem{
 
 
 
-
-
-
 }

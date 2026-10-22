@@ -75,9 +75,4 @@ public abstract class Personagem {
         this.ataque = ataque;
     }
 
-
-
-
-
-
 }
