@@ -24,6 +24,8 @@ public abstract class Personagem {
         HP = dano - defesa;
     }
 
+    public abstract void receberDano();
+
     public void defender(){
 
     }

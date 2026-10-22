@@ -7,17 +7,10 @@ public class Ranger extends Personagem{
         super(nome, HP, ataque, defesa);
     }
 
+    @Override
+    public void receberDano() {
 
-
-
-
-
-
-
-
-
-
-
+    }
 
 
 }
