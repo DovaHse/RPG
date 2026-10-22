@@ -7,4 +7,24 @@ public class Guerreiro extends Personagem{
         super(nome, HP, ataque, defesa);
     }
 
+
+    @Override
+    public void atacar() {
+        super.atacar();
+    }
+
+    @Override
+    public void receberDano() {
+    }
+
+    @Override
+    public void defender() {
+        super.defender();
+    }
+
+    @Override
+    public boolean estarVivo() {
+        super.estarVivo();
+        return false;
+    }
 }

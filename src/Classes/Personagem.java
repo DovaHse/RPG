@@ -20,14 +20,18 @@ public abstract class Personagem {
     public void atacar() {
 
     }
-    public void receberDano(){
-
+    public void receberDano(int dano){
+        HP = dano - defesa;
     }
+
     public void defender(){
 
     }
-    public void estarVivo(){
-
+    public boolean estarVivo(){
+            if (HP > 0) {
+                return true;
+            }
+        return false;
     }
 
 

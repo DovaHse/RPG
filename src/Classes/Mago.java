@@ -7,19 +7,10 @@ public class Mago extends Personagem{
         super(nome, HP, ataque, defesa);
     }
 
+    @Override
+    public void receberDano() {
 
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
 
 }
