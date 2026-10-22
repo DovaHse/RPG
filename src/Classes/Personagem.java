@@ -19,6 +19,7 @@ public abstract class Personagem {
 
     public void atacar(Personagem alvo) {
         alvo.receberDano(this.ataque);
+        System.out.println(this.getNome() + " Ataca! ");
     }
     public void receberDano(int dano){
         int danoEfetivo = dano - defesa;
@@ -26,6 +27,7 @@ public abstract class Personagem {
             danoEfetivo = 0;
         }
         this.HP = this.HP - danoEfetivo;
+        System.out.println(this.getNome() + " Recebe " + danoEfetivo + " De Dano ");
     }
 
 

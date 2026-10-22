@@ -12,7 +12,7 @@ public class Main {
 
         while (conan.estarVivo() && xablau.estarVivo()) {
             conan.atacar(xablau);
-            System.out.println(xablau.getHP());
+            xablau.receberDano(conan.getAtaque());
         }
 
 
