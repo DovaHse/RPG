@@ -18,8 +18,8 @@ public abstract class Personagem {
         //
 
     public void atacar(Personagem alvo) {
-        alvo.receberDano(this.ataque);
         System.out.println(this.getNome() + " Ataca! ");
+        alvo.receberDano(this.ataque);
     }
     public void receberDano(int dano){
         int danoEfetivo = dano - defesa;
@@ -28,6 +28,10 @@ public abstract class Personagem {
         }
         this.HP = this.HP - danoEfetivo;
         System.out.println(this.getNome() + " Recebe " + danoEfetivo + " De Dano ");
+        if (this.HP <= 0){
+            System.out.println(this.getNome() + " Foi Derrotado ");
+        }
+
     }
 
 
@@ -39,8 +43,8 @@ public abstract class Personagem {
             if (HP > 0) {
                 return true;
             }
-        return false;
-    }
+            return false;
+        }
 
 
     // metodos
