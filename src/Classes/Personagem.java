@@ -6,6 +6,7 @@ public abstract class Personagem {
     private int HP;
     private int ataque;
     private int defesa;
+    private boolean defendendo;
 
 
     public Personagem(String nome, int HP, int ataque, int defesa) {
@@ -13,7 +14,7 @@ public abstract class Personagem {
         this.HP = HP;
         this.ataque = ataque;
         this.defesa = defesa;
-
+        this.defendendo = false;
     }
         //
 
@@ -22,22 +23,32 @@ public abstract class Personagem {
         alvo.receberDano(this.ataque);
     }
     public void receberDano(int dano){
-        int danoEfetivo = dano - defesa;
+        int defesaCalculada = this.defesa;
+
+        if (this.defendendo) {
+            defesaCalculada +=2;
+            this.defendendo = false;
+        }
+        int danoEfetivo = dano - defesaCalculada;
         if (danoEfetivo < 0){
             danoEfetivo = 0;
         }
+
         this.HP = this.HP - danoEfetivo;
         System.out.println(this.getNome() + " Recebe " + danoEfetivo + " De Dano ");
         if (this.HP <= 0){
             System.out.println(this.getNome() + " Foi Derrotado ");
         }
-
     }
 
 
     public void defender(){
+        this.defendendo = true;
         System.out.println(this.getNome() + " Defendeu! ");
+
     }
+
+
 
     public boolean estarVivo(){
             if (HP > 0) {
