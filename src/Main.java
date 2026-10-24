@@ -27,7 +27,9 @@ public class Main {
                 case 2 : conan.defender();
                 break;
             }
-
+            if (xablau.estarVivo()){
+                xablau.atacar(conan);
+            }
         }
     }
 

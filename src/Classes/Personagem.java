@@ -36,7 +36,7 @@ public abstract class Personagem {
 
 
     public void defender(){
-
+        System.out.println(this.getNome() + " Defendeu! ");
     }
 
     public boolean estarVivo(){
