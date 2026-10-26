@@ -1,3 +1,4 @@
+import Classes.Chefe;
 import Classes.Guerreiro;
 import Classes.Orc;
 import Classes.Personagem;
@@ -7,12 +8,12 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Guerreiro conan = new Guerreiro("Conan", 100, 25, 20);
-        Orc xablau = new Orc("Xablau", 100, 25, 15);
+        Guerreiro conan = new Guerreiro("Conan", 100, 35, 30);
+        Chefe balrog = new Chefe("Balrog", 200, 30, 30);
 
         Scanner acao = new Scanner(System.in);
 
-        while (conan.estarVivo() && xablau.estarVivo()) {
+        while (conan.estarVivo() && balrog.estarVivo()) {
             System.out.println("----------------------------");
             System.out.println("Escolha sua proxima acao");
             System.out.println("1 - Atacar");
@@ -26,7 +27,7 @@ public class Main {
 
                 switch (escolha) {
                    case 1:
-                       conan.atacar(xablau);
+                       conan.atacar(balrog);
                        acaoValida = true;
                        break;
                    case 2:
@@ -38,8 +39,8 @@ public class Main {
                        break;
                }
            }
-            if (xablau.estarVivo()){
-                xablau.atacar(conan);
+            if (balrog.estarVivo()){
+                balrog.atacar(conan);
             }
         }
         acao.close();
