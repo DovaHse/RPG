@@ -1,19 +1,19 @@
-import Classes.Chefe;
-import Classes.Guerreiro;
-import Classes.Orc;
-import Classes.Personagem;
+import Classes.*;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
 
-        Guerreiro conan = new Guerreiro("Conan", 100, 35, 30);
+        Guerreiro solrac = new Guerreiro("Solrac", 100, 35, 30);
         Chefe balrog = new Chefe("Balrog", 200, 30, 30);
+        Mago gandalf = new Mago("Gandalf", 100, 40, 20 );
+        Ranger legolas = new Ranger("Legolas", 100, 35, 20);
 
         Scanner acao = new Scanner(System.in);
 
-        while (conan.estarVivo() && balrog.estarVivo()) {
+        while (solrac.estarVivo() && balrog.estarVivo() && gandalf.estarVivo() && legolas.estarVivo()) {
             System.out.println("----------------------------");
             System.out.println("Escolha sua proxima acao");
             System.out.println("1 - Atacar");
@@ -27,20 +27,21 @@ public class Main {
 
                 switch (escolha) {
                    case 1:
-                       conan.atacar(balrog);
+                       solrac.atacar(balrog);
                        acaoValida = true;
                        break;
                    case 2:
-                       conan.defender();
+                       solrac.defender();
                        acaoValida = true;
                        break;
+
                    default:
                        System.out.println("Comando Invalido! Escolha novamente");
                        break;
                }
            }
             if (balrog.estarVivo()){
-                balrog.atacar(conan);
+                balrog.atacar(solrac);
             }
         }
         acao.close();
