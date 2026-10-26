@@ -7,4 +7,14 @@ public class Mago extends Personagem{
         super(nome, HP, ataque, defesa);
     }
 
+    public void curarPersonagem (Personagem alvo){
+        int cura = += 25;
+
+        if (alvo.estarVivo()) {
+            alvo.getHP();
+
+
+        }
+    }
+
 }

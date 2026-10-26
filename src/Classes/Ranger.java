@@ -7,4 +7,7 @@ public class Ranger extends Personagem{
         super(nome, HP, ataque, defesa);
     }
 
+
+
+
 }

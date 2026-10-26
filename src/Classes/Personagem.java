@@ -16,7 +16,7 @@ public abstract class Personagem {
         this.defesa = defesa;
         this.defendendo = false;
     }
-        //
+        // Metodos
 
     public void atacar(Personagem alvo) {
         System.out.println(this.getNome() + " Ataca! ");
@@ -49,7 +49,6 @@ public abstract class Personagem {
     }
 
 
-
     public boolean estarVivo(){
             if (HP > 0) {
                 return true;
@@ -58,7 +57,9 @@ public abstract class Personagem {
         }
 
 
-    // metodos
+
+
+    // metodos especiais
 
     public String getNome() {
         return nome;
