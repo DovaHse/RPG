@@ -7,5 +7,12 @@ public class Guerreiro extends Personagem{
         super(nome, HP, ataque, defesa);
     }
 
+    public void ataquePesado(Personagem alvo) {
+           ataquePesado(Personagem alvo) == (this.getAtaque() * 1.5);
+           alvo.receberDano();
+    }
 
+    public void coolDownAtaquePesado(){
+
+    }
 }

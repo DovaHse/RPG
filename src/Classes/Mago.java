@@ -8,12 +8,11 @@ public class Mago extends Personagem{
     }
 
     public void curarPersonagem (Personagem alvo){
-        int cura = += 25;
+        int cura =  25;
 
         if (alvo.estarVivo()) {
-            alvo.getHP();
-
-
+            alvo.setHP(alvo.getHP() + cura);
+            System.out.println(alvo.getNome() + " Recuperou  " + cura + " HP ");
         }
     }
 
