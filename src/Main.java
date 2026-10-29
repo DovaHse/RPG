@@ -29,6 +29,7 @@ public class Main {
                 System.out.println("----------------------------");
 
                 boolean acaoValida = false;
+                solrac.coolDownAtaquePesado();
 
                 while (!acaoValida) {
                 int escolha = acao.nextInt();
@@ -43,8 +44,9 @@ public class Main {
                        acaoValida = true;
                        break;
                     case 3:
-
-
+                        solrac.ataquePesado(ysmir);
+                        acaoValida = true;
+                        break;
                    default:
                        System.out.println("Comando Invalido! Escolha novamente");
                        break;
@@ -110,6 +112,8 @@ public class Main {
                 System.out.println("----------------------------");
 
                 boolean acaoValida = false;
+                legolas.cooldownFlechaPerfurante();
+
                 while (!acaoValida) {
                     int escolha = acao.nextInt();
 
@@ -123,7 +127,9 @@ public class Main {
                             acaoValida = true;
                             break;
                         case 3:
-
+                            legolas.flechaPerfurante(ysmir);
+                            acaoValida = true;
+                            break;
                         default:
                             System.out.println("Comando Invalido! Escolha novamente");
                             break;
