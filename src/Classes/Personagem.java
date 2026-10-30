@@ -16,7 +16,7 @@ public abstract class Personagem {
         this.defesa = defesa;
         this.defendendo = false;
     }
-        // Metodos
+            // Metodos
 
     public void atacar(Personagem alvo) {
         System.out.println(this.getNome() + " Ataca! ");
@@ -56,10 +56,7 @@ public abstract class Personagem {
             return false;
         }
 
-
-
-
-    // metodos especiais
+        // metodos especiais
 
     public String getNome() {
         return nome;

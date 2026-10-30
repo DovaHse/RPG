@@ -12,8 +12,6 @@ public class Chefe extends Personagem{
             this.setHP(getHP() - dano);
     }
 
-
-
     public void agirAleatorio(List<Personagem> heroisVivos){
         Random random = new Random();
         int acao = random.nextInt(3) + 1;
@@ -31,9 +29,6 @@ public class Chefe extends Personagem{
             }
     }
 
-
-
-
     public void ataqueBasico(List<Personagem> heroisvivos){
                 Random random = new Random();
                 int target = random.nextInt(heroisvivos.size());
@@ -44,13 +39,16 @@ public class Chefe extends Personagem{
     }
 
     public void defesa(){
-
+                super.defender();
     }
 
     public void cospeFogo(List<Personagem> heroisvivos){
 
-
-
-
+                for (int i = 0; i < heroisvivos.size(); i++) {
+                    Personagem alvo = heroisvivos.get(i);
+                    if (alvo.estarVivo()) {
+                        alvo.receberDano(this.getAtaque());
+                    }
+                }
     }
 }
